@@ -5,7 +5,29 @@ using namespace std;
 
 
 int main() {
-    Student stu = Student("John Titor", "MBNLUT005", "Computer Science", 76);
+    Student stu1 = Student("JohnTitor", "MBNLUT005", "ComputerScience", 76);
 
-    cout << "Provided student has the following details: \n" << stu.getStudent() << endl;
+    cout << "Enter the student details as prompted: " << endl;
+    string name, roll, course;
+    int marks;
+
+    cout << "Student name: ";
+    cin >> name;
+    cout << "\nStudent Roll Number: ";
+    cin >> roll;
+    cout << "\nStudent Course: ";
+    cin >> course;
+    cout << "\nStudent marks: ";
+    cin >> marks;
+
+    Student stu2 = Student(name, roll, course, marks);
+    if (stu1.equalStudent(stu2)) {
+        cout << "This is the same student." << endl;
+        cout << "Student 2's Roll Number is: " << stu2.getRollNumber() << endl;
+    } else {
+        cout << "The students are different" << endl;
+    }
+
+    //cout << "Student 1 is: \n" << stu1.toString(stu1) << endl;
+    //cout << "Student 2 is: \n" << stu2.toString(stu2) << endl;
 }

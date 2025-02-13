@@ -23,9 +23,16 @@ class Student {
         string getCourseName();
         void setMarks(int);
         int getMarks();
-        string getStudent();
+        void setStudent(string, string, string, int);
+        Student getStudent();
+        Student getStudent(string, string, string, int);
+        bool equalStudent(Student);
         Student();
+        Student(Student&);
         Student(string, string, string, int);
+        void addStudent(Student);
+        //string toString();
+        string toString(Student);
 
     private:
         string name;
