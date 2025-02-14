@@ -22,12 +22,12 @@ int main() {
 
     Student stu2 = Student(name, roll, course, marks);
     if (stu1.equalStudent(stu2)) {
-        cout << "This is the same student." << endl;
-        cout << "Student 2's Roll Number is: " << stu2.getRollNumber() << endl;
+        cout << ">> This is the same student." << endl;
     } else {
-        cout << "The students are different" << endl;
+        cout << ">> The students are different!" << endl;
     }
+    cout << ">> Student 1 is: <<\n" << stu2.toString() << endl;
+    cout << ">> Student 2 is <<\n" << stu2.toString() << endl;
 
-    //cout << "Student 1 is: \n" << stu1.toString(stu1) << endl;
-    //cout << "Student 2 is: \n" << stu2.toString(stu2) << endl;
+    return 0;
 }

@@ -24,14 +24,16 @@ class Student {
         void setMarks(int);
         int getMarks();
         void setStudent(string, string, string, int);
+        void setStudent(Student);
         Student getStudent();
         Student getStudent(string, string, string, int);
+        Student getStudent(Student);
         bool equalStudent(Student);
         Student();
         Student(Student&);
         Student(string, string, string, int);
         void addStudent(Student);
-        //string toString();
+        string toString();
         string toString(Student);
 
     private:

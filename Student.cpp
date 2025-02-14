@@ -3,7 +3,7 @@
  * on a list of students. Each student have details such as Names, Roll Number, Course, and Marks. 
  * @author BK201
  * @date 11 February 2025
-*/
+ */
 
 #include "Student.h" // Include the corresponding header file
 
@@ -12,8 +12,7 @@
  *
 */
 
-Student::Student() : name(""), rollNumber(""), courseName(""), marks(-1) {
-}
+Student::Student() : name(""), rollNumber(""), courseName(""), marks(-1) { }
 
 Student::Student(Student& stu) {
     name = stu.name;
@@ -60,6 +59,13 @@ void Student::setStudent(string studentName, string studentRollNumber, string st
     }
 }
 
+void Student::setStudent(Student stu) {
+    name = stu.name;
+    rollNumber = stu.rollNumber;
+    courseName = stu.courseName;
+    marks = stu.marks;
+}
+
 /**
  * Getters
  */
@@ -87,6 +93,10 @@ Student Student::getStudent(string stuName, string stuRollNumber, string stuCour
     return Student(stuName, stuRollNumber, stuCourseName, stuMarks);
 }
 
+Student Student::getStudent(Student stu) {
+    return Student(stu.name, stu.rollNumber, stu.courseName, stu.marks);
+}
+
 bool Student::equalStudent(Student otherStudent) {
     return (
         name == otherStudent.name &&
@@ -95,12 +105,12 @@ bool Student::equalStudent(Student otherStudent) {
         marks == otherStudent.marks
     );
 }
-/*
-string toString() {
-    return "Name: " + Student.name + "\nRoll Number: " + getRollNumber() + "\nCourse: " + getCourseName() + "\nMarks Obtained: " + to_string(marks) + "\n";
+
+string Student::toString() {
+    return "Name: " + getName() + "\nRoll Number: " + getRollNumber() + "\nCourse: " + getCourseName() + "\nMarks Obtained: " + to_string(marks) + "\n";
 }
-*/
-string toString(Student student) {
+
+string Student::toString(Student student) {
     return "Name: " + student.getName() + "\nRoll Number: " + student.getRollNumber() + "\nCourse: " + student.getCourseName() + "\nMarks Obtained: " + to_string(student.getMarks()) + "\n";
 }
 
