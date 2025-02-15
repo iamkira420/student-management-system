@@ -114,14 +114,4 @@ string Student::toString(Student student) {
     return "Name: " + student.getName() + "\nRoll Number: " + student.getRollNumber() + "\nCourse: " + student.getCourseName() + "\nMarks Obtained: " + to_string(student.getMarks()) + "\n";
 }
 
-/**
- * Create a new student instance and add them to a list of students
- * C part of the CRUD operation
- * @param student to be created and added to the list of students
- *
-
-void Student::addStudent(Student student) {
-    // TO DO
-}
-*/
 

@@ -1,33 +1,29 @@
 #include "Student.h" // Include the class definition
+#include "StudentManager.h"
 #include <string>
 #include <iostream>
 using namespace std;
 
 
 int main() {
-    Student stu1 = Student("JohnTitor", "MBNLUT005", "ComputerScience", 76);
+    StudentManager sm;
+    cout << "Should be an empty list of Student here: " << endl;
+    sm.displayAllStudents();
 
-    cout << "Enter the student details as prompted: " << endl;
-    string name, roll, course;
-    int marks;
+    Student john = Student("John Titor", "JHNTTR002", "Computer Science", 76);
+    Student robot = Student("Mr Robot", "MRRRBT007", "Cybersecurity", 95);
+    Student elliot = Student("Elliot Alderson", "ELTADS004", "Psychology", 43);
+    Student light = Student("Light Yagami", "LGTYGM005", "Ethics", 63);
+    Student eren = Student("Eren Jeager", "ERBYGR008", "Special Relativity", 80);
 
-    cout << "Student name: ";
-    cin >> name;
-    cout << "\nStudent Roll Number: ";
-    cin >> roll;
-    cout << "\nStudent Course: ";
-    cin >> course;
-    cout << "\nStudent marks: ";
-    cin >> marks;
+    sm.addStudent(john);
+    sm.addStudent(robot);
+    sm.addStudent(elliot);
+    sm.addStudent(light);
+    sm.addStudent(eren);
 
-    Student stu2 = Student(name, roll, course, marks);
-    if (stu1.equalStudent(stu2)) {
-        cout << ">> This is the same student." << endl;
-    } else {
-        cout << ">> The students are different!" << endl;
-    }
-    cout << ">> Student 1 is: <<\n" << stu2.toString() << endl;
-    cout << ">> Student 2 is <<\n" << stu2.toString() << endl;
+    cout << "\n----    All Students    ----\n";
+    sm.displayAllStudents();
 
     return 0;
 }

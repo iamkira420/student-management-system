@@ -1,0 +1,51 @@
+#include "Student.h"
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+using namespace std;
+
+#include "StudentManager.h"
+
+ 
+// Add a Student to the list of students (CREATE)
+void StudentManager::addStudent(Student stu) {
+    students[stu.getRollNumber()] = stu;
+    cout << "Student added successfully." << endl;
+}
+
+// Retrieve a Student by roll number (READ)
+void StudentManager::getStudentByRollNumber(string rollNumber) {
+    auto iterator = students.find(rollNumber);
+
+    if (iterator != students.end()) {
+        iterator->second.getStudent().toString();
+    } else {
+        cout << "Student not found! Please add student and try again!" << endl;
+    }
+}
+
+// Retrieve Student by name (READ)
+void StudentManager::getStudentByName(string name) {
+    for (auto& pair : students) {
+        if (pair.second.getName() == name) {
+            pair.second.getStudent().toString();
+            return;
+        }
+    }
+    cout << "Student not found! Please add student and try again!" << endl;
+}
+
+// Display all students (READ)
+void StudentManager::displayAllStudents() {
+    if (students.empty()) {
+        cout << "No students in the system! Please add students and try again!" << endl;
+        return;
+    }
+    for (auto& pair : students) {
+        cout << pair.second.getStudent().toString() << endl;
+    }
+}
+
+
+
