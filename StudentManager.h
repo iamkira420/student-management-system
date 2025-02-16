@@ -15,6 +15,7 @@ class StudentManager {
         void getStudentByRollNumber(string);
         void getStudentByName(string);
         void displayAllStudents();
+        void updateStudent(string, string, int);
 };
 
 #endif // STUDENTMANAGER_H

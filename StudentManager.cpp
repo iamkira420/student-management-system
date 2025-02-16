@@ -47,5 +47,17 @@ void StudentManager::displayAllStudents() {
     }
 }
 
+// Update student marks or course name (UPDATE)
+void StudentManager::updateStudent(string rollNumber, string newCourse, int newMarks) {
+    auto iterator = students.find(rollNumber);
+
+    if (iterator != students.end()) {
+        iterator->second.setCourseName(newCourse);
+        iterator->second.setMarks(newMarks);
+        cout << "Student updated successfully." << endl;
+    } else {
+        cout << "Student not found! Please add student and try again!" << endl;
+    }
+}
 
 

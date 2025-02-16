@@ -30,5 +30,9 @@ int main() {
     cout << "\nSearching for Student by Roll Number: ELTADS004" << endl;
     sm.getStudentByRollNumber("LGTYGM005");
 
+    cout << "\n--- Updating a Student! ---" << endl;
+    sm.updateStudent("MRRRBT007", "Data Science", 72);
+    sm.getStudentByRollNumber("MRRRBT007");
+
     return 0;
 }
