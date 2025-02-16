@@ -19,7 +19,7 @@ void StudentManager::getStudentByRollNumber(string rollNumber) {
     auto iterator = students.find(rollNumber);
 
     if (iterator != students.end()) {
-        iterator->second.getStudent().toString();
+        cout << iterator->second.getStudent().toString() << endl;
     } else {
         cout << "Student not found! Please add student and try again!" << endl;
     }
@@ -29,7 +29,7 @@ void StudentManager::getStudentByRollNumber(string rollNumber) {
 void StudentManager::getStudentByName(string name) {
     for (auto& pair : students) {
         if (pair.second.getName() == name) {
-            pair.second.getStudent().toString();
+            cout << pair.second.getStudent().toString() << endl;
             return;
         }
     }

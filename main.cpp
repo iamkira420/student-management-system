@@ -25,5 +25,10 @@ int main() {
     cout << "\n----    All Students    ----\n";
     sm.displayAllStudents();
 
+    cout << "\nSearching for Student by Name: Elliot" << endl;
+    sm.getStudentByName("Elliot Alderson");
+    cout << "\nSearching for Student by Roll Number: ELTADS004" << endl;
+    sm.getStudentByRollNumber("LGTYGM005");
+
     return 0;
 }
