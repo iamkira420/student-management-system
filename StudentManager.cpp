@@ -60,4 +60,11 @@ void StudentManager::updateStudent(string rollNumber, string newCourse, int newM
     }
 }
 
-
+// Delete a student (DELETE)
+void StudentManager::deleteStudent(string rollNumber) {
+    if (students.erase(rollNumber)) {
+        cout << "Student deleted successfully." << endl;
+    } else {
+        cout << "Student not found! Please add student and try again!" << endl;
+    }
+}

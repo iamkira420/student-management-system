@@ -16,6 +16,7 @@ class StudentManager {
         void getStudentByName(string);
         void displayAllStudents();
         void updateStudent(string, string, int);
+        void deleteStudent(string);
 };
 
 #endif // STUDENTMANAGER_H

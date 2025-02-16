@@ -25,14 +25,19 @@ int main() {
     cout << "\n----    All Students    ----\n";
     sm.displayAllStudents();
 
-    cout << "\nSearching for Student by Name: Elliot" << endl;
+    /*cout << "\nSearching for Student by Name: Elliot" << endl;
     sm.getStudentByName("Elliot Alderson");
     cout << "\nSearching for Student by Roll Number: ELTADS004" << endl;
-    sm.getStudentByRollNumber("LGTYGM005");
+    sm.getStudentByRollNumber("LGTYGM005");*/
 
     cout << "\n--- Updating a Student! ---" << endl;
     sm.updateStudent("MRRRBT007", "Data Science", 72);
     sm.getStudentByRollNumber("MRRRBT007");
+
+    cout << "\n--- Updating a Student! ---" << endl;
+    sm.deleteStudent("LGTYGM005");
+    sm.deleteStudent("JHNTTR002");
+    sm.displayAllStudents();
 
     return 0;
 }
