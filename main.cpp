@@ -24,8 +24,7 @@ int main() {
        "******************************************************************\n";   
         
 
-    
-    // TO Do: Implement the main menu
+
     string mainMenu = 
             "Please select an option below: \n"
             "0. Print burner? \n"
@@ -37,7 +36,7 @@ int main() {
             "6. Display all existing students: \n";
 
     int choice;
-    while (true) {
+    while (true) { //USE A DO-WHILE LOOP
         cout << "\n" << mainMenu << "\n[~/random/user]$ ";
         cin >> choice;
 
